@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "39160a93-be3b-4bd2-b00d-d12b4d766739",
+		"name": "Food-Factory-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"kumar\",\r\n    \"email\": \"kumar@wee.com\",\r\n    \"password\": \"pwd\",\r\n    \"status\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ravi JS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJNYXJpeWEgU2luZ2giLCJlbWFpbCI6Im1hcml5YUBnbWFpbC5jb20iLCJpYXQiOjE2MTY0MDA2MTMsImV4cCI6MTYxNjQwNDIxM30.2AXRGeOj9LB2D_BWpfDCSI_2E2l3qXT5ErxgtcnrQ20",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user/14",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kumar@wee.com\",\r\n    \"password\": \"pwd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsIm5hbWUiOiJyYXZpIiwiZW1haWwiOiJyYW5hYXNAd2VlLmNvbSIsImlhdCI6MTYxNjI1MTUxNSwiZXhwIjoxNjE2MjU1MTE1fQ.Su5AOlxS4MWpGkR664zTs78-XSmBk5ieakK4oWGEvh8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2MTY0MDA3ODQsImV4cCI6MTYxNjQwNDM4NH0.7O2HAqY1oPhkJYuFXEGY2vS4u5bbMaH-ANvpdZ5GRJU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\": \"admin\",\r\n    \"new_password\": \"admin\",\r\n    \"confirm_password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/update-pwd",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-pwd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "food List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJrdW1hciIsImVtYWlsIjoia3VtYXJAd2VlLmNvbSIsImlhdCI6MTYxNjMwNjQzMSwiZXhwIjoxNjE2MzEwMDMxfQ.-tMn-ogDhuetxjbC0bFWiRpiN1TGZjfLB8ZmME7dVsw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/food",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find food",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/food/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"food",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create food",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJrdW1hciIsImVtYWlsIjoia3VtYXJAd2VlLmNvbSIsImlhdCI6MTYxNjMxNDM3MSwiZXhwIjoxNjE2MzE3OTcxfQ.vZnTBVWXW8B-SGMYQ68a6c1o6Udw5nx0mAF7wsDqxe0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Chicken Noodles\",\r\n    \"cuisine\": \"Noodles\",\r\n    \"ingredients\": \"chicken \",\r\n    \"lotNumber\": \"013\",\r\n    \"costOfProduction\": \"60\",\r\n    \"sellingCost\": \"130\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/food",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update food",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rova with Ghee Roast\",\r\n    \"cuisine\": \"Roast\",\r\n    \"ingredients\": \"ghee \",\r\n    \"lotNumber\": \"f0_04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/food/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"food",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "food",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/food/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"food",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingredient List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJrdW1hciIsImVtYWlsIjoia3VtYXJAd2VlLmNvbSIsImlhdCI6MTYxNjMwNjQzMSwiZXhwIjoxNjE2MzEwMDMxfQ.-tMn-ogDhuetxjbC0bFWiRpiN1TGZjfLB8ZmME7dVsw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ingredient",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingredient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Ingredient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJrdW1hciIsImVtYWlsIjoia3VtYXJAd2VlLmNvbSIsImlhdCI6MTYxNjMxMDUyOSwiZXhwIjoxNjE2MzE0MTI5fQ.bUwhgvIS8iqBO4px3hyXQnAi-TnxOMlA_UEeKVdUmkQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ingredient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingredient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingredient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJrdW1hciIsImVtYWlsIjoia3VtYXJAd2VlLmNvbSIsImlhdCI6MTYxNjMwNjQzMSwiZXhwIjoxNjE2MzEwMDMxfQ.-tMn-ogDhuetxjbC0bFWiRpiN1TGZjfLB8ZmME7dVsw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ghee Roast\",\r\n    \"lotNumber\": \"08\",\r\n    \"availableQuantity\": \"50\",\r\n    \"thresholdQuantity\": \"10\",\r\n    \"price\": \"90\",\r\n    \"vendorName\": \"RR Hotel\",\r\n    \"vendorEmail\": \"rr@rrhotel.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ingredient",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingredient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Ingredient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJrdW1hciIsImVtYWlsIjoia3VtYXJAd2VlLmNvbSIsImlhdCI6MTYxNjMwNjQzMSwiZXhwIjoxNjE2MzEwMDMxfQ.-tMn-ogDhuetxjbC0bFWiRpiN1TGZjfLB8ZmME7dVsw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Egg Combo 13\",\r\n        \"lotNumber\": \"091\",\r\n        \"availableQuantity\": 90,\r\n        \"thresholdQuantity\": 30,\r\n        \"price\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ingredient/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingredient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ingredient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsIm5hbWUiOiJrdW1hciIsImVtYWlsIjoia3VtYXJAd2VlLmNvbSIsImlhdCI6MTYxNjMxMDUyOSwiZXhwIjoxNjE2MzE0MTI5fQ.bUwhgvIS8iqBO4px3hyXQnAi-TnxOMlA_UEeKVdUmkQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ingredient/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingredient",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJNYXJpeWEgU2luZ2giLCJlbWFpbCI6Im1hcml5YUBnbWFpbC5jb20iLCJpYXQiOjE2MTYzOTI5NDAsImV4cCI6MTYxNjM5NjU0MH0.vBfHISJrFYGK2P1j3HI65Xl2OTxszxuaZPYpH0qhqRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJNYXJpeWEgU2luZ2giLCJlbWFpbCI6Im1hcml5YUBnbWFpbC5jb20iLCJpYXQiOjE2MTYzOTI5NDAsImV4cCI6MTYxNjM5NjU0MH0.vBfHISJrFYGK2P1j3HI65Xl2OTxszxuaZPYpH0qhqRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"status\": \"confirmed\",\r\n        \"dateOfdelivery\": \"2021-03-22T13:52:41.000Z\",\r\n        \"modeOfTransport\": \"two wheeler\",\r\n        \"items\":[\r\n            {\r\n                \"item_id\": \"5\",\r\n                \"item_qty\": \"2\"                \r\n            },{\r\n                \"item_id\": \"6\",\r\n                \"item_qty\": \"2\"                \r\n            }\r\n            ,{\r\n                \"item_id\": \"7\",\r\n                \"item_qty\": \"10\"                \r\n            }\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2MTY0MDA3ODQsImV4cCI6MTYxNjQwNDM4NH0.7O2HAqY1oPhkJYuFXEGY2vS4u5bbMaH-ANvpdZ5GRJU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Order list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsIm5hbWUiOiJNYXJpeWEgU2luZ2giLCJlbWFpbCI6Im1hcml5YUBnbWFpbC5jb20iLCJpYXQiOjE2MTYzOTY1OTEsImV4cCI6MTYxNjQwMDE5MX0._gdqRD6yaUP3ayru6CWMyHxrENJYrohHaUfiAPXr-DQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/order",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
